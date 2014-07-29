@@ -6,3 +6,6 @@
 *.project
 /bin
 /build
+out
+target
+classes

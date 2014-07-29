@@ -1,0 +1,14 @@
+<mapper namespace="com.rest.app.repository.MemberMapper">
+
+    <select id="findById" resultType="Member">
+        select id, email, name from member
+    </select>
+
+    <insert id="insert" parameterType="Member">
+        insert into member(email, name) values(#{email}, #{name})
+        <selectKey keyProperty="id" resultType="long" order="AFTER">
+            CALL SCOPE_IDENTITY()
+        </selectKey>
+    </insert>
+
+</mapper>

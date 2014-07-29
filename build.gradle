@@ -58,6 +58,7 @@ dependencies {
     compile 'org.apache.ibatis:ibatis-sqlmap:2.3.4.726'
     compile 'joda-time:joda-time:2.3'
     compile 'hsqldb:hsqldb:1.8.0.10'
+    compile 'com.h2database:h2:1.4.180'
     runtime 'jstl:jstl:1.2'
     compile 'taglibs:standard:1.1.2'
     compile 'javassist:javassist:3.12.1.GA'
@@ -66,7 +67,12 @@ dependencies {
 
 	compile 'javax.persistence:persistence-api:1.0.2'
 	compile 'opensymphony:sitemesh:2.4.2'
-
+	compile 'com.jolbox:bonecp:0.8.0.RELEASE'
+	compile 'org.mybatis:mybatis:3.2.2'
+	compile 'org.mybatis:mybatis-spring:1.2.2'
+	compile 'com.googlecode.flyway:flyway-core:2.3.1'
+	
+	
     /*rest*/
     compile 'org.springframework.hateoas:spring-hateoas:0.8.0.RELEASE'
    // compile 'org.pojomatic:pojomatic:2.3.1'
