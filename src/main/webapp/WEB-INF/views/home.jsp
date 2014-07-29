@@ -13,7 +13,8 @@
 			<p>
 				<spring:message code="message.welcome"/>
 			</p>
-			<p><a class="btn btn-primary btn-large" href="http://geowarin.wordpress.com"><spring:message code="message.home.learnMore"/></a></p>
+			<p><a class="btn btn-primary btn-large" href="#">
+			<spring:message code="message.home.learnMore"/></a></p>
 
 		</div>
 
@@ -34,7 +35,7 @@
 		  			<c:if test="${not empty message}">
 						<div id="message" class="alert alert-success">
 							<spring:message code="message.youWrote" arguments="${message}" htmlEscape="true" />
-						</div>	
+						</div>
 					</c:if>
 
 				  	<button type="submit" class="btn">Submit</button>

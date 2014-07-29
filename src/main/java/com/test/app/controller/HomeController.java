@@ -25,27 +25,27 @@ public class HomeController {
 
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public ModelAndView displayHome(ModelAndView mv){
-		mv.setViewName("/home");
+		mv.setViewName("home");
 		return mv;
 	}
-	
+
 	@ModelAttribute
 	public FormDTO createFormBean(){
 		return new FormDTO();
 	}
-	
+
 	@RequestMapping(value="/", method=RequestMethod.POST)
 	public String submitMessage(@Valid FormDTO formDTO, BindingResult result,
 								SessionStatus sessionStatus,
 								RedirectAttributes redirectAttrs){
-		
+
 		if(result.hasErrors()){
 			return "/home";
 		}
 		String message = formDTO.toString();
 		sessionStatus.setComplete();
 		redirectAttrs.addFlashAttribute("message", message);
-		
+
 		return "redirect:/";
 	}
 }
